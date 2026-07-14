@@ -1,0 +1,12 @@
+# OS & Editor
+.DS_Store
+.vscode/
+*.swp
+*.swo
+
+# Node/Dependencies (jika nanti kita pakai build tools)
+node_modules/
+package-lock.json
+
+# Environment
+.env

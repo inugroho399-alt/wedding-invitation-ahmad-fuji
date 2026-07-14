@@ -1,0 +1,22 @@
+{
+  "name": "The Wedding of Reza & Anjar",
+  "short_name": "Reza & Anjar",
+  "description": "Undangan Pernikahan Digital Reza dan Anjar",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F9F7F2",
+  "theme_color": "#B08D57",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

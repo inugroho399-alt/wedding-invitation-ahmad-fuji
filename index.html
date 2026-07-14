@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#B08D57" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Undangan Pernikahan: Reza & Anjar</title>
+    <meta name="description" content="Turut berbahagia dan mengundang Anda untuk hadir di hari bahagia pernikahan Reza dan Anjar.">
+    <meta name="keywords" content="undangan pernikahan, wedding invitation, reza dan anjar, undangan digital, wedding website">
+    <link rel="canonical" href="https://website-kamu.com/" /> <!-- Ganti dengan URL asli nanti -->
+    
+    <!-- Open Graph / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://website-kamu.com/">
+    <meta property="og:title" content="The Wedding of Reza & Anjar">
+    <meta property="og:description" content="Turut berbahagia dan mengundang Anda untuk hadir di hari bahagia kami.">
+    <meta property="og:image" content="https://website-kamu.com/assets/images/og-cover.jpg"> 
+
+    <!-- PWA / Apple Mobile Web App Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Reza & Anjar">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
+    <!-- Fonts Preconnect (Optimasi Performa) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <!-- CSS Architecture -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+</head>
+<body class="no-scroll"> <!-- Kunci scroll di awal -->
+
+    <!-- Audio Background (Disembunyikan) -->
+    <audio id="bg-music" src="assets/audio/bgm.mp3" loop preload="metadata"></audio>
+
+    <!-- 1. Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-spinner"></div>
+        <p style="margin-top: 1rem; color: var(--color-text-secondary); font-size: var(--fs-small);">Memuat Undangan...</p>
+    </div>
+
+    <!-- 2. Opening Cover -->
+    <div id="opening-cover">
+        <div class="cover-content">
+            <h1 class="font-script">The Wedding Of</h1>
+            <h2>Reza & Anjar</h2>
+            
+            <div class="guest-wrapper">
+                <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+                <span class="guest-name" id="guest-name">Tamu Undangan</span>
+            </div>
+
+            <button id="btn-open-invitation" class="btn btn-primary btn-open">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                Buka Undangan
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" style="opacity: 0;">
+        
+        <!-- ===== HERO SECTION ===== -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg" id="hero-bg"></div>
+            <div class="hero-content">
+                <p class="font-script">The Wedding Of</p>
+                <h1>Reza & Anjar</h1>
+                <div class="hero-date">12 . 08 . 2026</div>
+            </div>
+        </section>
+
+        <!-- ===== COUNTDOWN ===== -->
+        <section id="save-the-date" class="countdown-section">
+            <div class="container">
+                <p class="font-script text-accent reveal">Save The Date</p>
+                <h2 class="reveal delay-1">Menghitung Hari</h2>
+                <p class="reveal delay-2">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan acara pernikahan kami.</p>
+                <div class="countdown-wrapper reveal delay-3" id="countdown">
+                    <div class="countdown-card">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">Hari</div>
+                    </div>
+                    <div class="countdown-card">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">Jam</div>
+                    </div>
+                    <div class="countdown-card">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">Menit</div>
+                    </div>
+                    <div class="countdown-card">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Detik</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROFIL MEMPELAI ===== -->
+        <section id="couple" class="couple-section">
+            <div class="container">
+                <p class="section-subtitle reveal">Assalamu'alaikum Wr. Wb.</p>
+                <div class="couple-intro reveal delay-1">
+                    <p>Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Dengan memohon rahmat dan ridho-Nya, kami mengundang Bapak/Ibu/Saudara/i pada pernikahan kami:</p>
+                </div>
+
+                <div class="couple-wrapper">
+                    <!-- Mempelai Pria -->
+                    <div class="couple-card reveal delay-1">
+                        <div class="couple-photo-wrapper">
+                            <img src="assets/images/couple/groom.jpg" alt="Reza Mahendra Putra" class="couple-photo" loading="lazy">
+                        </div>
+                        <h3 class="couple-name">Reza Mahendra Putra</h3>
+                        <p class="couple-parents">
+                            Putra Pertama dari<br>
+                            Bapak H. Ahmad Sudrajat &<br>
+                            Ibu Hj. Siti Nurhaliza
+                        </p>
+                        <a href="https://instagram.com/reza" target="_blank" rel="noopener noreferrer" class="couple-instagram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            @reza
+                        </a>
+                    </div>
+
+                    <!-- Divider & -->
+                    <div class="couple-divider reveal delay-2">&</div>
+
+                    <!-- Mempelai Wanita -->
+                    <div class="couple-card reveal delay-3">
+                        <div class="couple-photo-wrapper">
+                            <img src="assets/images/couple/bride.jpg" alt="Anjar Wulandari" class="couple-photo" loading="lazy">
+                        </div>
+                        <h3 class="couple-name">Anjar Wulandari</h3>
+                        <p class="couple-parents">
+                            Putri Kedua dari<br>
+                            Bapak Drs. Budi Santoso &<br>
+                            Ibu Sri Mulyani
+                        </p>
+                        <a href="https://instagram.com/anjar" target="_blank" rel="noopener noreferrer" class="couple-instagram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            @anjar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== LOVE STORY TIMELINE ===== -->
+        <section id="love-story" class="timeline-section">
+            <div class="container">
+                <p class="section-subtitle reveal">Our Journey</p>
+                <h2 class="text-center reveal delay-1">Love Story</h2>
+
+                <div class="timeline" id="timeline-container">
+                    <!-- Timeline items akan di-generate oleh JavaScript dari config.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DETAIL ACARA (AKAD & RESEPSI) ===== -->
+        <section id="events" class="event-section">
+            <div class="container">
+                <p class="section-subtitle reveal">Waktu & Tempat</p>
+                <h2 class="text-center reveal delay-1">Detail Acara</h2>
+
+                <div class="event-cards">
+                    <!-- Akad Nikah -->
+                    <div class="event-card reveal delay-1">
+                        <div class="event-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </div>
+                        <h3 class="event-title">Akad Nikah</h3>
+                        
+                        <div class="event-detail">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <div class="event-detail-text">
+                                <strong>Rabu, 12 Agustus 2026</strong>
+                                08.00 - 10.00 WIB
+                            </div>
+                        </div>
+
+                        <div class="event-detail">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <div class="event-detail-text">
+                                <strong>Masjid Agung Al-Azhar</strong>
+                                Jl. Sisingamangaraja, Kebayoran Baru, Jakarta Selatan
+                            </div>
+                        </div>
+
+                        <div class="event-map">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2!2d106.8!3d-6.24!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sid!2sid!4v1"
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Lokasi Akad Nikah">
+                            </iframe>
+                        </div>
+
+                        <a href="https://maps.google.com/?q=Masjid+Agung+Al-Azhar+Jakarta" target="_blank" rel="noopener noreferrer" class="btn btn-maps">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            Buka di Maps
+                        </a>
+                    </div>
+
+                    <!-- Resepsi -->
+                    <div class="event-card reveal delay-2">
+                        <div class="event-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3 class="event-title">Resepsi Pernikahan</h3>
+                        
+                        <div class="event-detail">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <div class="event-detail-text">
+                                <strong>Rabu, 12 Agustus 2026</strong>
+                                11.00 - 14.00 WIB
+                            </div>
+                        </div>
+
+                        <div class="event-detail">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <div class="event-detail-text">
+                                <strong>Hotel Mulia Senayan</strong>
+                                Jl. Asia Afrika, Senayan, Jakarta Pusat
+                            </div>
+                        </div>
+
+                        <div class="event-map">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3!2d106.8!3d-6.22!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sid!2sid!4v1"
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Lokasi Resepsi">
+                            </iframe>
+                        </div>
+
+                        <a href="https://maps.google.com/?q=Hotel+Mulia+Senayan+Jakarta" target="_blank" rel="noopener noreferrer" class="btn btn-maps">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            Buka di Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GALLERY SECTION ===== -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <p class="section-subtitle reveal">Our Moments</p>
+                <h2 class="text-center reveal delay-1">Galeri Foto</h2>
+                
+                <div class="gallery-grid reveal delay-2" id="gallery-grid">
+                    <!-- Generate via JS atau Hardcode. Kita hardcode 4 dummy dulu -->
+                    <div class="gallery-item" data-index="0"><img src="assets/images/gallery/1.jpg" alt="Gallery 1" loading="lazy"></div>
+                    <div class="gallery-item" data-index="1"><img src="assets/images/gallery/2.jpg" alt="Gallery 2" loading="lazy"></div>
+                    <div class="gallery-item" data-index="2"><img src="assets/images/gallery/3.jpg" alt="Gallery 3" loading="lazy"></div>
+                    <div class="gallery-item" data-index="3"><img src="assets/images/gallery/4.jpg" alt="Gallery 4" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VIDEO SECTION ===== -->
+        <section id="video" class="video-section">
+            <div class="container">
+                <p class="font-script text-accent reveal">Cinematic</p>
+                <h2 class="reveal delay-1">Video Prewedding</h2>
+                <div class="video-wrapper reveal delay-2">
+                    <!-- Ganti URL src dengan link embed YouTube asli -->
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Prewedding Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sisakan space di bawah agar footer tidak tertutup Bottom Nav -->
+        <div style="height: 100px;"></div>
+        
+                <!-- ===== RSVP & GUESTBOOK ===== -->
+        <section id="rsvp" class="rsvp-section">
+            <div class="container">
+                <p class="section-subtitle reveal">Kirim Ucapan</p>
+                <h2 class="text-center reveal delay-1">Buku Tamu</h2>
+                
+                <form class="rsvp-form reveal delay-2" id="rsvp-form">
+                    <div class="form-group">
+                        <label for="guest-name-input">Nama Lengkap</label>
+                        <input type="text" id="guest-name-input" class="form-control" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Konfirmasi Kehadiran</label>
+                        <div class="radio-group">
+                            <label class="radio-item">
+                                <input type="radio" name="attendance" value="Hadir" checked> Hadir
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="attendance" value="Tidak Hadir"> Tidak Hadir
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="attendance" value="Ragu-ragu"> Ragu-ragu
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guest-message">Ucapan & Doa</label>
+                        <textarea id="guest-message" class="form-control" placeholder="Tulis doa dan ucapan terbaik Anda..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Kirim Ucapan</button>
+                </form>
+
+                <div class="guestbook-list" id="guestbook-list">
+                    <!-- List ucapan akan di-render oleh JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GIFT / AMPLOP DIGITAL ===== -->
+        <section id="gift" class="gift-section">
+            <div class="container">
+                <p class="section-subtitle reveal">Wedding Gift</p>
+                <h2 class="text-center reveal delay-1">Kirim Hadiah</h2>
+                <p class="text-center reveal delay-2" style="max-width: 400px; margin: 0 auto;">
+                    Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih, Anda dapat memberi kado melalui:
+                </p>
+
+                <div class="gift-wrapper reveal delay-3" id="gift-container">
+                    <!-- Konten Bank & QRIS di-generate JS -->
+                </div>
+                
+                <!-- Tombol Share Link -->
+                <div class="reveal delay-3" style="margin-top: 2rem;">
+                    <button class="btn btn-primary" id="btn-share-wa">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Bagikan Undangan via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toast Notification Element -->
+        <div class="toast" id="toast">Pesan Berhasil Disalin!</div>
+        
+        <footer class="text-center" style="padding: var(--spacing-md); background: var(--color-bg-dark); color: var(--color-text-light);">
+            <!-- Isi footer sama seperti sebelumnya -->
+            <p style="font-family: var(--font-script); font-size: 1.5rem; color: var(--color-accent); margin-bottom: 0.5rem;">Terima Kasih</p>
+            <p style="font-size: var(--fs-small); opacity: 0.8;">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
+            <p style="font-size: var(--fs-small); margin-top: var(--spacing-sm); opacity: 0.5;">&copy; 2026 Reza & Anjar</p>
+        </footer>
+    </main>
+
+    <!-- ===== LIGHTBOX MODAL ===== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-btn lightbox-close" id="lightbox-close" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <button class="lightbox-btn lightbox-prev" id="lightbox-prev" aria-label="Previous">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="lightbox-btn lightbox-next" id="lightbox-next" aria-label="Next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="Lightbox Image" id="lightbox-img">
+        </div>
+    </div>
+
+    <!-- ===== FLOATING MUSIC BUTTON ===== -->
+    <button class="music-toggle" id="music-toggle" aria-label="Toggle Music">
+        <!-- Icon Play (Default) -->
+        <svg class="icon-play" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        <!-- Icon Pause (Hidden Default) -->
+        <svg class="icon-pause" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>
+    </button>
+
+    <!-- ===== BOTTOM NAVIGATION ===== -->
+    <nav class="bottom-nav" id="bottom-nav">
+        <a href="#hero" class="nav-item active" data-target="hero">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Home</span>
+        </a>
+        <a href="#couple" class="nav-item" data-target="couple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Mempelai</span>
+        </a>
+        <a href="#events" class="nav-item" data-target="events">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Acara</span>
+        </a>
+        <a href="#gallery" class="nav-item" data-target="gallery">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            <span>Galeri</span>
+        </a>
+    </nav>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

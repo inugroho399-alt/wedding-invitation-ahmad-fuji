@@ -1,0 +1,106 @@
+/* =========================================
+   1. CSS RESET & NORMALIZE
+   ========================================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    overflow-x: hidden; /* Mencegah scroll horizontal tidak sengaja */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* =========================================
+   2. DESIGN SYSTEM (CSS VARIABLES)
+   ========================================= */
+:root {
+    /* Color Palette - Elegant Cream & Gold */
+    --color-bg-primary: #F9F7F2;      /* Warm Cream Background */
+    --color-bg-secondary: #FFFFFF;    /* White for Cards */
+    --color-bg-dark: #2D312E;         /* Deep Forest/Charcoal for Overlay */
+    
+    --color-text-primary: #2D312E;    /* Main Text */
+    --color-text-secondary: #6B706C;  /* Muted Text */
+    --color-text-light: #F9F7F2;      /* Text on Dark Background */
+    
+    --color-accent: #B08D57;          /* Champagne Gold */
+    --color-accent-hover: #967543;    /* Darker Gold */
+    --color-border: rgba(45, 49, 46, 0.1);
+
+    /* Typography - Fluid Scale */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-script: 'Pinyon Script', cursive;
+
+    /* Fluid Font Sizes (Min, Preferred, Max) */
+    --fs-h1: clamp(2.5rem, 5vw + 1rem, 4rem);
+    --fs-h2: clamp(2rem, 4vw + 1rem, 3rem);
+    --fs-h3: clamp(1.5rem, 2vw + 1rem, 2rem);
+    --fs-body: clamp(0.95rem, 1vw + 0.5rem, 1.1rem);
+    --fs-small: 0.875rem;
+
+    /* Spacing & Layout */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-full: 9999px;
+
+    /* Shadows (Soft & Elegant) */
+    --shadow-soft: 0 4px 20px rgba(45, 49, 46, 0.05);
+    --shadow-medium: 0 10px 30px rgba(45, 49, 46, 0.08);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* =========================================
+   3. GLOBAL TYPOGRAPHY
+   ========================================= */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    line-height: 1.2;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); margin-bottom: var(--spacing-sm); }
+h3 { font-size: var(--fs-h3); }
+p { font-size: var(--fs-body); color: var(--color-text-secondary); margin-bottom: var(--spacing-sm); }
+
+.text-accent { color: var(--color-accent); }
+.text-center { text-align: center; }
+.font-script { font-family: var(--font-script); font-weight: 400; }
