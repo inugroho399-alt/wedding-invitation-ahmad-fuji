@@ -4,45 +4,45 @@
  * Format Tanggal: YYYY-MM-DDTHH:mm:ss (Standar ISO 8601)
  */
 export const WEDDING_CONFIG = {
-    groomName: "Reza",
-    brideName: "Anjar",
-    weddingDate: "2026-08-12T08:00:00", 
+    groomName: "Ahmad",
+    brideName: "Fuji",
+    weddingDate: "2026-08-08T09:00:00", 
     timezone: "Asia/Jakarta",
 
     // Profil Mempelai
     groom: {
-        fullName: "Reza Mahendra Putra",
-        title: "Putra Pertama dari",
-        parents: "Bapak H. Ahmad Sudrajat & Ibu Hj. Siti Nurhaliza",
+        fullName: "Ahmad Kurniawan Dwi Alfiansyah",
+        title: "Putra Kedua dari",
+        parents: "bp. Sukadi dan ibu Wigiastutikningsih",
         photo: "assets/images/couple/groom.jpg",
-        instagram: "https://instagram.com/reza",
+        instagram: "https://instagram.com/-",
     },
     bride: {
-        fullName: "Anjar Wulandari",
-        title: "Putri Kedua dari",
-        parents: "Bapak Drs. Budi Santoso & Ibu Sri Mulyani",
+        fullName: "Fuji Indarti",
+        title: "Putri Pertama dari",
+        parents: "bp. Surat dan ibu Karmini",
         photo: "assets/images/couple/bride.jpg",
-        instagram: "https://instagram.com/anjar",
+        instagram: "https://instagram.com/fujiind99",
     },
 
     // Detail Acara
     events: {
         akad: {
             title: "Akad Nikah",
-            date: "Rabu, 12 Agustus 2026",
-            time: "08.00 - 10.00 WIB",
-            location: "Masjid Agung Al-Azhar",
-            address: "Jl. Sisingamangaraja, Kebayoran Baru, Jakarta Selatan",
-            mapsUrl: "https://maps.google.com/?q=Masjid+Agung+Al-Azhar+Jakarta",
+            date: "Sabtu, 8 Agustus 2026",
+            time: "09.00 - selesai",
+            location: "Rumah mempelai wanita",
+            address: "Jaten rt 02 rw 09 Wonokerto, Wonogiri",
+            mapsUrl: "https://maps.app.goo.gl/pYEbgp6tsK4DZ7uQ8",
             mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2!2d106.8!3d-6.24!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sid!2sid!4v1"
         },
         resepsi: {
             title: "Resepsi Pernikahan",
-            date: "Rabu, 12 Agustus 2026",
-            time: "11.00 - 14.00 WIB",
-            location: "Hotel Mulia Senayan",
-            address: "Jl. Asia Afrika, Senayan, Jakarta Pusat",
-            mapsUrl: "https://maps.google.com/?q=Hotel+Mulia+Senayan+Jakarta",
+            date: "Minggu, Agustus 2026",
+            time: "11.00 - Selesai",
+            location: "Rumah mempelai Pria",
+            address: "Nanggulan rt3/2 Kedungsono, Bulu, Sukoharjo",
+            mapsUrl: "https://maps.app.goo.gl/bEkH9BUQmugjNHyd9",
             mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3!2d106.8!3d-6.22!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sid!2sid!4v1"
         }
     },
@@ -50,41 +50,38 @@ export const WEDDING_CONFIG = {
     // Love Story
     loveStory: [
         {
-            year: "2019",
+            year: "7 Juli 2023",
             title: "Pertama Bertemu",
-            description: "Kami pertama kali bertemu di sebuah acara kampus. Senyumnya yang hangat membuat hari itu terasa berbeda."
+            description: "Pertama kenal karena iseng. Kebetulan teman saya adalah teman dia juga secara sengaja memperkenalkan kami dengan memberikan nomor whatsapp saya kepada dia. Dan dia memulai chat. Hanya percakapan biasa dan belum ada perasaan apa apa karena memang belum pernah bertemu."
         },
         {
-            year: "2020",
+            year: "8 Agustus 2023",
             title: "Mulai Dekat",
-            description: "Obrolan ringan berubah menjadi panggilan telepon panjang setiap malam. Kami tahu ada yang istimewa di antara kami."
+            description: "Setelah hampir satu bulan kami chatting, akhirnya kami memutuskan untuk bertemu. Cukup deg-degan saat itu. Kami mengobrol dan makan bersama. Sejujurnya saya cukup salting saat itu, tapi mencoba untuk bersikap biasa saja. Singkat cerita sejak saat pertemuan pertama itu kami semakin dekat dan semakin sering bertemu. Dan kami pun menjalin asmara meskipun tidak ada kata jadian"
         },
         {
-            year: "2022",
+            year: "20 Desember 2025",
             title: "Lamaran",
-            description: "Di bawah langit sore yang jingga, aku memberanikan diri untuk melamar. Dan dia berkata, 'Iya'."
+            description: "Setelah sekian lama menjalin hubungan akhirnya kami memutuskan untuk melangkah ke jenjang yang lebih serius. Sedikit cerita, memang saat kami sedang ngobrol dan bercanda saya sering bilang ingin dilamar saat hari ulang tahun saya. Dan benar saja, tepat di hari ulang tahun saya dia datang bersama keluarga besarnya melamar saya. Hari itu benar2 hari yang berkesan untuk saya, karena di hari istimewa itu saya menerima kado terindah seumur hidup saya. Meskipun berlangsung sederhana tetapi terasa hangat dan tentu saja senyum bahagia terpancar dari keluarga kami."
         },
         {
-            year: "2026",
+            year: "8 Agustus 2026",
             title: "Hari Bahagia",
-            description: "InsyaAllah kami akan menyatukan langkah dalam ikatan suci pernikahan."
+            description: "Hari demi hari berlalu, hari yang ditunggu-tunggu semakin dekat. Alhamdulillah segala urusan dilancarkan. Tidak terasa sebentar lagi kami akan mengikat janji dihadapan Allah sebagai pasangan halal yang sah. Barakallah🤍"
         }
     ], // <-- PERHATIKAN ADA KOMA DI SINI
 
-    // Data Amplop Digital
-    bankAccounts: [
-        {
-            bankName: "Bank Central Asia (BCA)",
-            accountNumber: "1234567890",
-            accountName: "Reza Mahendra Putra",
-            logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1200px-Bank_Central_Asia.svg.png"
+        // Data Amplop Digital
+    gift: {
+        address: {
+            name: "Ahmad Kurniawan Dwi Alfiansyah",
+            fullAddress: "Nanggulan rt3/2 Kedungsono, Bulu, Sukoharjo"
         },
-        {
-            bankName: "Bank Mandiri",
-            accountNumber: "0987654321",
-            accountName: "Anjar Wulandari",
-            logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Bank_Mandiri_logo_en.svg/1200px-Bank_Mandiri_logo_en.svg.png"
+        bank: {
+            bankName: "BCA",
+            accountNumber: "0154300607",
+            accountName: "Ahmad Kurniawan Dwi Alfiansyah",
+            logo: "https://inv.mehnikah.com/wp-content/uploads/2025/04/bca-1.webp"
         }
-    ],
-    qrisImage: "assets/images/qris/qris-dummy.jpg"
+    },
 };

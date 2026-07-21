@@ -20,6 +20,11 @@ body {
     overflow-x: hidden; /* Mencegah scroll horizontal tidak sengaja */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image: url('../assets/images/hero/body-bg.jpg'); /* ← taruh file motif globalmu di sini */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
 }
 
 img, picture, video, canvas, svg {

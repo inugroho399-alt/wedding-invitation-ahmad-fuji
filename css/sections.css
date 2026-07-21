@@ -31,195 +31,338 @@
     to { transform: rotate(360deg); }
 }
 
+
 /* =========================================
-   2. OPENING COVER (Amplop Digital)
+   2. OPENING COVER (Gaya Terang & Elegan)
    ========================================= */
 body.no-scroll {
-    overflow: hidden; /* Mengunci scroll background saat cover terbuka */
+    overflow: hidden;
 }
 
 #opening-cover {
     position: fixed;
     inset: 0;
-    height: 100vh; /* Fallback untuk browser lama */
-    height: 100dvh; 
+    height: 100vh;
+    height: 100dvh;
     z-index: 9988;
-    /* Background image + Dark Overlay agar teks terbaca */
-    background: linear-gradient(rgba(45, 49, 46, 0.6), rgba(45, 49, 46, 0.8)), 
-                url('../assets/images/hero/cover.jpg') center/cover no-repeat;
+    /* Background gambar TANPA overlay gelap - biarkan gambar terlihat jelas */
+    background: url('../assets/images/hero/cover.jpg') center center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-text-light);
     text-align: center;
-    
-    /* Animasi transisi saat cover dibuka */
     transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.8s ease;
 }
 
 #opening-cover.opened {
-    transform: translateY(-100%); /* Slide ke atas */
+    transform: translateY(-100%);
     opacity: 0;
-    pointer-events: none; /* Agar tidak menghalangi klik di bawahnya */
+    pointer-events: none;
 }
 
-.cover-content {
-    padding: 2rem;
-    max-width: 500px;
-}
-
+/* "The Wedding Of" - Kembali ke Font Script Romantis */
 .cover-content .font-script {
-    font-size: 2.5rem;
+    font-family: var(--font-script); /* Pinyon Script */
+    font-size: 2.5rem; /* Ukuran lebih besar agar tulisan sambungnya jelas */
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: none; /* Script font tidak perlu huruf kapital semua */
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    margin-top: -20vh;
+}
+
+/* Nama Mempelai - Besar, Serif Elegan */
+.cover-content h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 500;
     color: var(--color-accent);
     margin-bottom: 0.5rem;
-}
-
-.cover-content h2 {
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    color: #fff;
-    margin-bottom: 2rem;
-    letter-spacing: 2px;
-}
-
-.guest-wrapper {
-    margin-bottom: 2.5rem;
-}
-
-.guest-wrapper p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: var(--fs-small);
-    text-transform: uppercase;
     letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+/* Tanggal */
+.cover-date {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* "Dear:" Label */
+.guest-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.guest-wrapper .dear-label {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--color-text-primary);
     margin-bottom: 0.5rem;
+    font-style: italic;
 }
 
 .guest-name {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
-    color: #fff;
-    font-weight: 500;
-    border-bottom: 1px solid var(--color-accent);
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    letter-spacing: 3px; /* Efek spasi lebar seperti di referensi */
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
-/* Animasi tombol pulse (berdenyut) agar user tahu harus di-klik */
+/* Subtitle "You're Invited to Our Wedding" */
+.guest-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.5px;
+}
+
+/* Tombol Buka Undangan - Rounded, Brownish Gold */
 .btn-open {
     animation: pulse 2s infinite;
+    padding: 0.85rem 2rem;
+    font-size: 0.85rem;
+    background-color: var(--color-accent);
+    color: #fff;
+    border-radius: var(--radius-full);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(176, 141, 87, 0.3);
+}
+
+.btn-open:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(176, 141, 87, 0.4);
 }
 
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 rgba(176, 141, 87, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(176, 141, 87, 0); }
+    70% { box-shadow: 0 0 0 12px rgba(176, 141, 87, 0); }
     100% { box-shadow: 0 0 0 0 rgba(176, 141, 87, 0); }
 }
 
+
 /* =========================================
-   1. HERO SECTION & PARALLAX WRAPPER
+   1. HERO SECTION (Konsep Frame Ornamen)
    ========================================= */
 .hero-section {
     position: relative;
     height: 100vh;
-    height: 100dvh; 
+    height: 100dvh;
     min-height: 600px;
-    overflow: hidden; /* Penting untuk efek Parallax */
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--color-text-light);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: 0%;
 }
 
 .hero-bg {
     position: absolute;
-    top: -10%; /* Beri ruang untuk parallax */
+    top: 0;          /* Pas di section, tidak ada offset */
     left: 0;
     width: 100%;
-    height: 120%; 
-    background-image: linear-gradient(rgba(45, 49, 46, 0.4), rgba(45, 49, 46, 0.7)), 
-                      url('../assets/images/hero/hero-bg.jpg');
+    height: 100%;    /* Tinggi pas = 100% section, agar ikut scroll bersama */
+    background-image: url('../assets/images/hero/hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    will-change: transform; /* Optimasi GPU untuk animasi Parallax */
+    /* will-change: transform DIHAPUS karena tidak ada animasi parallax lagi (hemat GPU/baterai HP) */
     z-index: -1;
 }
 
 .hero-content {
     z-index: 2;
     padding: 2rem;
+    max-width: 500px;
+    /* Geser seluruh konten ke atas. Ubah nilai sesuai kebutuhan */
+    margin-top: -20vh;
 }
 
 .hero-content .font-script {
-    font-size: 2.5rem;
-    color: var(--color-accent);
-    margin-bottom: 0.5rem;
+    font-family: var(--font-script);
+    font-size: 1.8rem;              /* Lebih kecil dari 2.5rem */
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
     opacity: 0;
     animation: fadeInDown 1.2s ease forwards;
 }
 
+/* Nama Mempelai - Serif Besar, Warna Emas */
 .hero-content h1 {
-    font-size: clamp(3rem, 10vw, 5.5rem);
-    color: #fff;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
+    font-family: var(--font-heading); /* Cormorant Garamond */
+    font-size: clamp(1.6rem, 5vw, 2.4rem);   /* Lebih kecil lagi */
+    font-weight: 500;
+    color: var(--color-accent); /* Emas/Coklat */
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
     opacity: 0;
     animation: fadeInDown 1.2s ease 0.3s forwards;
 }
 
+/* Tanggal - Sans-serif, Uppercase, Tanpa Border */
 .hero-date {
-    font-family: var(--font-body);
-    font-size: 1.2rem;
+    font-family: var(--font-body); /* Montserrat */
+    font-size: 0.65rem;
+    font-weight: 500;
     letter-spacing: 3px;
     text-transform: uppercase;
-    border-top: 1px solid var(--color-accent);
-    border-bottom: 1px solid var(--color-accent);
-    padding: 0.5rem 0;
+    color: var(--color-text-secondary);
+    /* HAPUS border-top dan border-bottom */
     display: inline-block;
     opacity: 0;
     animation: fadeInUp 1.2s ease 0.6s forwards;
 }
 
 /* =========================================
-   2. COUNTDOWN TIMER
+   2. COUNTDOWN / SAVE THE DATE (Gaya Oval)
    ========================================= */
 .countdown-section {
-    padding: var(--spacing-lg) var(--spacing-md);
+    --color-brown: #A8824F;
+    background: var(--color-brown);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 0%;
+    padding-right: 0%;
     text-align: center;
+    display: flex;
+    /* Tambahkan margin-top untuk jaga space jika Hero tidak ada margin-bottom */
+    
 }
 
+/* Kartu oval krem dengan border putih */
+.countdown-oval {
+    --oval-vr: 30%; /* Dari 30% → 15% (lebih panjang, kurang melengkung) */
+    position: relative;
+    overflow: hidden; 
+    z-index: 2;
+    background: url('../assets/images/hero/hero-bg.jpg') center/cover no-repeat;
+    border: 4px solid #fff;
+    border-radius: 50% / var(--oval-vr);
+    max-width: 640px; 
+    width: 100%;
+    padding: clamp(2rem, 6vw, 3rem) clamp(1.5rem, 4vw, 2rem);
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.countdown-oval::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(249, 247, 242, 0.8);
+    border-radius: inherit;
+    z-index: 1; /* Di atas gambar, di bawah teks */
+}
+
+/* Foto mempelai bulat di atas */
+.countdown-photo {
+    width: clamp(200px, 60vw, 240px);
+    height: clamp(150px, 45vw, 200px);
+    object-fit: cover;
+    border-radius: 40%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+/* 4 kotak countdown coklat */
 .countdown-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    max-width: 600px;
-    margin: 2rem auto 0;
+    gap: 0.6rem;
+    width: 80%;
+    max-width: 220px;
+    z-index: 2;
 }
 
 .countdown-card {
-    background: var(--color-bg-secondary);
-    padding: 1.5rem 0.5rem;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--color-border);
+    background: var(--color-brown);
+    padding: 0.85rem 0.25rem;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .countdown-number {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-family: var(--font-body);
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
     font-weight: 600;
-    color: var(--color-accent);
+    color: #fff;
     line-height: 1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .countdown-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--color-text-secondary);
+    font-size: 0.7rem;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-calendar {
+    background: var(--color-brown);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.7);
+    padding: 0.55rem 1.1rem;   /* lebih ringkas (dari 0.8rem 1.5rem) */
+    font-size: 0.65rem;        /* huruf lebih kecil */
+    letter-spacing: 1.5px;     /* spasi huruf dirapatkan agar proporsional */
+    gap: 0.4rem;               /* jarak ikon–teks lebih rapat */
+    z-index: 2;
+}
+
+.btn-calendar:hover {
+    background: var(--color-accent-hover);
+}
+
+/* Ayat / Quote */
+.wedding-verse {
+    font-family: var(--font-heading);
+    font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    max-width: 90%;
+    margin: 0.5rem auto 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.wedding-verse cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: normal;
+    font-size: 0.9em;
+    color: var(--color-text-primary);
+}
+
+/* Utility: teks tersembunyi tapi terbaca oleh SEO & Screen Reader */
+.sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* =========================================
@@ -255,41 +398,65 @@ body.no-scroll {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* =========================================
-   5. COUPLE / PROFIL MEMPELAI
-   ========================================= */
 .couple-section {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-xl) 1.5rem;
     text-align: center;
-    background: var(--color-bg-primary);
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin-bottom: 0;
 }
+.couple-section .container { padding-left: 0; padding-right: 0; }
 
-.couple-section .section-subtitle {
+.couple-oval {
+    --oval-vr: 15%;
+    position: relative;
+    color: #4f4a4500;
+    overflow: hidden;
+    border: 4px solid #A88;
+    border-radius: 45% / var(--oval-vr);
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    margin-top: 0%;
+    padding: clamp(3rem, 9vw, 4.5rem) clamp(1.75rem, 7vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+/* Layer krem samar di atas gambar, di bawah teks */
+.couple-oval::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(249, 247, 242, 0.80);
+    border-radius: inherit;
+    z-index: 1;
+}
+/* Semua konten wajib di atas layer krem */
+.couple-oval > * { position: relative; z-index: 2; }
+
+.couple-oval .section-subtitle {
     font-family: var(--font-script);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--color-accent);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
+    margin-top: 10px;
 }
-
-.couple-intro {
-    max-width: 600px;
-    margin: 0 auto var(--spacing-lg);
+.couple-intro { max-width: 82%; margin: 0 auto; margin-top: 10px;}
+.couple-intro p {
+    font-size: var(--fs-small);
+    color: #4f4a45;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.55);
 }
 
 .couple-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Tablet ke atas: 2 kolom */
-@media (min-width: 768px) {
-    .couple-wrapper {
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
-    }
+    display: flex;
+    flex-direction: column;      /* KEMBALI ke atas-bawah */
+    align-items: center;
+    gap: 0;                      /* Gap diatur oleh margin divider */
+    width: 100%;
 }
 
 .couple-card {
@@ -298,244 +465,332 @@ body.no-scroll {
     align-items: center;
 }
 
+/* Foto OVAL VERTIKAL (portrait) */
 .couple-photo-wrapper {
     position: relative;
-    width: 200px;
-    height: 200px;
-    margin-bottom: var(--spacing-md);
+    width: clamp(180px, 55%, 230px);
+    aspect-ratio: 3 / 4;        /* tinggi > lebar → oval tegak */
+    margin-bottom: 1rem;
 }
-
-/* Dekorasi lingkaran di belakang foto */
 .couple-photo-wrapper::before {
     content: '';
     position: absolute;
-    inset: -8px;
+    inset: -6px;
     border: 2px solid var(--color-accent);
     border-radius: 50%;
     opacity: 0.4;
 }
-
 .couple-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--color-bg-secondary);
-    box-shadow: var(--shadow-medium);
+    border-radius: 50%;          /* + rasio 3/4 = ellipse vertikal */
+    border: 4px solid #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .couple-name {
     font-family: var(--font-heading);
-    font-size: var(--fs-h3);
-    color: var(--color-text-primary);
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+    color: var(--color-accent);
     margin-bottom: 0.25rem;
 }
-
 .couple-parents {
     font-size: var(--fs-small);
-    color: var(--color-text-secondary);
+    color: #4f4a45;
     line-height: 1.6;
-    max-width: 280px;
+    max-width: 240px;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.55);
 }
-
 .couple-instagram {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    margin-top: 0.75rem;
+    margin-top: 0.2rem;
     color: var(--color-accent);
     text-decoration: none;
     font-size: var(--fs-small);
     font-weight: 500;
     transition: var(--transition-fast);
 }
-
-.couple-instagram:hover {
-    color: var(--color-accent-hover);
-}
-
-/* Tanda & di antara mempelai */
-.couple-divider {
-    font-family: var(--font-script);
-    font-size: 3rem;
-    color: var(--color-accent);
-    display: none; /* Hidden di mobile, muncul di desktop */
-}
-
-@media (min-width: 768px) {
-    .couple-divider {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-self: center;
-    }
+.couple-instagram:hover { color: var(--color-accent-hover); }
+.textdan{
+    font-family: var(--font-heading);
+    color : var(--color-accent);
+    font-size: 50px;
+    margin: 30px;
 }
 
 /* =========================================
-   6. LOVE STORY / TIMELINE
+   6. LOVE STORY / TIMELINE (Story-box + Kartu + Ikon Kalender)
    ========================================= */
 .timeline-section {
-    padding: var(--spacing-xl) var(--spacing-md);
-    background: var(--color-bg-secondary);
-}
-
-.timeline-section .section-subtitle {
-    font-family: var(--font-script);
-    font-size: 1.8rem;
-    color: var(--color-accent);
+    --color-brown:rgba(255,255,255,0.95);;
+    background: var(--color-brown);
+    padding: 3%;
     text-align: center;
-    margin-bottom: 0.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
+.timeline-section .container { padding-left: 0; padding-right: 0; }
 
-.timeline {
+/* === STORY-BOX: Kotak besar coklat dengan rounded corner === */
+.story-box {
     position: relative;
-    max-width: 600px;
-    margin: var(--spacing-lg) auto 0;
-    padding-left: 2rem;
+    overflow: hidden;
+    background: url('../assets/images/hero/hero-bg.jpg') center/cover no-repeat;
+    border-radius: 40px;  /* Rounded corner besar seperti referensi */
+    padding: clamp(2.5rem, 8vw, 4rem) 1.5rem clamp(3rem, 10vw, 5rem);
+    max-width: 460px;
+    margin: 0 auto;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    position: relative;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+    border: 4px solid #A8824F;
 }
-
-/* Garis vertikal timeline */
-.timeline::before {
+.story-box::before {
     content: '';
     position: absolute;
-    left: 7px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--color-accent), var(--color-border));
+    inset: 0;
+    background: #b18757ed; /* 80% krem, 20% transparan */
+    border-radius: inherit; /* Ikuti border-radius 40px */
+    z-index: 1;
 }
 
-.timeline-item {
+/* Pastikan semua konten (judul, timeline) berada di ATAS layer transparan */
+.story-box > * {
     position: relative;
-    padding-left: 2rem;
-    padding-bottom: var(--spacing-lg);
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-}
-
-/* Dot pada garis timeline */
-.timeline-dot {
-    position: absolute;
-    left: -2rem;
-    top: 4px;
-    width: 16px;
-    height: 16px;
-    background: var(--color-accent);
-    border: 3px solid var(--color-bg-secondary);
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.3);
     z-index: 2;
 }
 
-.timeline-year {
-    font-family: var(--font-heading);
+/* Judul "Love Story" di dalam story-box (warna putih/cream) */
+.story-box .section-subtitle {
+    font-family: var(--font-script);
     font-size: 1.4rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.25rem;
+}
+.story-box h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+/* === TIMELINE CONTAINER === */
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 3.5rem; /* Ruang untuk ikon di kiri */
+}
+
+/* Garis vertikal putih yang TERUS TURUN (tidak berhenti di ikon) */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 1.25rem; /* Tepat di tengah ikon (2.5rem / 2) */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Setiap item */
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Ikon kalender di kiri (kotak putih kecil dengan ikon coklat) */
+.timeline-icon {
+    position: absolute;
+    left: -3.5rem;
+    top: 1.5rem; /* Sejajar dengan bagian atas kartu */
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 2; /* Di atas garis */
+}
+.timeline-icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-accent);
+}
+
+/* Kartu putih berisi cerita */
+.timeline-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+
+/* Panah kecil dari kartu ke ikon (seperti speech bubble) */
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 1.5rem; /* Sejajar dengan ikon */
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #fff;
+}
+
+/* Tanggal (emas/coklat) */
+.timeline-date {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--color-accent);
     margin-bottom: 0.25rem;
 }
 
+/* Judul cerita (emas/coklat) */
 .timeline-title {
     font-family: var(--font-heading);
     font-size: 1.2rem;
-    color: var(--color-text-primary);
-    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
 }
 
+/* Deskripsi cerita (gelap) */
 .timeline-desc {
+    font-family: var(--font-body);
     font-size: var(--fs-small);
-    color: var(--color-text-secondary);
+    color: #4f4a45;
     line-height: 1.7;
+    margin: 0;
 }
+
 
 /* =========================================
-   7. EVENT / DETAIL ACARA (AKAD & RESEPSI)
+   7. EVENT / DETAIL ACARA (2 Oval: Akad & Resepsi)
    ========================================= */
 .event-section {
-    padding: var(--spacing-xl) var(--spacing-md);
-    background: var(--color-bg-primary);
-}
-
-.event-section .section-subtitle {
-    font-family: var(--font-script);
-    font-size: 1.8rem;
-    color: var(--color-accent);
+    --color-brown: #b18757;
+    background: var(--color-brown);
+    padding: var(--spacing-xl) 1.5rem;
+    padding-top: 10%;
+    padding-bottom: 10%;
     text-align: center;
+    margin-top: 0%;
+}
+.event-section .container { padding-left: 0; padding-right: 0; }
+
+.event-heading {
+    margin-bottom: 2rem;
+}
+.event-heading .section-subtitle {
+    font-family: var(--font-script);
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.7);
     margin-bottom: 0.25rem;
 }
-
-.event-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    max-width: 900px;
-    margin: var(--spacing-lg) auto 0;
+.event-heading h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: #fff;
+    font-weight: 400;
 }
 
-@media (min-width: 768px) {
-    .event-cards {
-        grid-template-columns: 1fr 1fr;
-    }
+/* Wrapper 2 oval */
+.event-ovals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
-.event-card {
-    background: var(--color-bg-secondary);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-md);
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--color-border);
-    text-align: center;
-    transition: var(--transition-smooth);
+/* === OVAL (teknik sama: foto + krem transparan) === */
+.event-oval {
+    --oval-vr: 30%;
+    position: relative;
+    overflow: hidden;
+    background: url('../assets/images/hero/body-bg.jpg') center/cover no-repeat;
+    border: 4px solid #fff;
+    border-radius: 50% / var(--oval-vr);
+    width: 100%;
+    max-width: 480px;
+    padding: clamp(3rem, 9vw, 4.5rem) clamp(1.5rem, 6vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
 }
 
-.event-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-medium);
+/* Layer krem transparan */
+.event-oval::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(249, 247, 242, 0.80);
+    border-radius: inherit;
+    z-index: 1;
 }
+.event-oval > * { position: relative; z-index: 2; }
 
+/* Ikon di atas oval */
 .event-icon {
-    width: 56px;
-    height: 56px;
-    margin: 0 auto var(--spacing-sm);
-    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+    width: 50px;
+    height: 50px;
+    background: var(--color-accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
+    box-shadow: 0 4px 12px rgba(176, 141, 87, 0.3);
 }
 
+/* Judul (Akad Nikah / Resepsi) */
 .event-title {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--color-text-primary);
-    margin-bottom: var(--spacing-sm);
+    font-size: clamp(1.3rem, 4.5vw, 1.6rem);
+    font-weight: 600;
+    color: var(--color-accent);
+    text-shadow: 0 1px 1px rgba(255,255,255,0.55);
 }
 
+/* Detail (tanggal, waktu, lokasi) */
 .event-detail {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
     text-align: left;
-    margin-bottom: 0.75rem;
+    width: 100%;
+    max-width: 320px;
 }
-
 .event-detail svg {
     flex-shrink: 0;
     color: var(--color-accent);
     margin-top: 2px;
 }
-
 .event-detail-text {
     font-size: var(--fs-small);
-    color: var(--color-text-secondary);
+    color: #4f4a45;
     line-height: 1.5;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.55);
 }
-
 .event-detail-text strong {
-    color: var(--color-text-primary);
+    color: #3a3631;
     display: block;
     font-size: var(--fs-body);
     margin-bottom: 0.15rem;
@@ -543,89 +798,97 @@ body.no-scroll {
 
 /* Maps Embed */
 .event-map {
-    margin-top: var(--spacing-sm);
+    width: 100%;
+    max-width: 320px;
     border-radius: var(--radius-md);
     overflow: hidden;
-    border: 1px solid var(--color-border);
+    border: 2px solid rgba(176, 141, 87, 0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-
 .event-map iframe {
     width: 100%;
-    height: 200px;
+    height: 180px;
     border: 0;
     display: block;
 }
 
+/* Tombol Buka di Maps */
 .btn-maps {
-    margin-top: var(--spacing-sm);
-    width: 100%;
-    background: transparent;
-    color: var(--color-accent);
-    border: 1.5px solid var(--color-accent);
-}
-
-.btn-maps:hover {
     background: var(--color-accent);
-    color: var(--color-text-light);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    gap: 0.4rem;
+}
+.btn-maps:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
 }
 
 /* =========================================
-   8. GALLERY & LIGHTBOX
+   8. GALLERY (Grid 2 Kolom - Simple & Elegan)
    ========================================= */
 .gallery-section {
-    padding: var(--spacing-xl) var(--spacing-md);
-    background: var(--color-bg-secondary);
-}
-
-.gallery-section .section-subtitle {
-    font-family: var(--font-script);
-    font-size: 1.8rem;
-    color: var(--color-accent);
+    --color-brown: #faf9f5ef;
+    background: var(--color-brown);
+    padding: var(--spacing-xl) 1.5rem;
     text-align: center;
+    margin:0%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.gallery-section .container { padding-left: 0; padding-right: 0; }
+
+.gallery-heading {
+    margin-bottom: 2rem;
+}
+.gallery-heading .section-subtitle {
+    font-family: var(--font-script);
+    font-size: 1.4rem;
+    color: #A8824F;
     margin-bottom: 0.25rem;
 }
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom di mobile */
-    gap: 0.75rem;
-    max-width: 800px;
-    margin: var(--spacing-lg) auto 0;
+.gallery-heading h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: #A8824F;
+    font-weight: 400;
 }
 
-@media (min-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 kolom di desktop */
-        gap: 1rem;
-    }
+/* Grid 2 kolom sederhana */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    max-width: 460px;
+    margin: 0 auto;
 }
 
 .gallery-item {
     position: relative;
-    aspect-ratio: 3 / 4; /* Rasio portrait yang elegan */
-    border-radius: var(--radius-md);
+    aspect-ratio: 3 / 4;
     overflow: hidden;
+    border-radius: 8px;
     cursor: pointer;
-    box-shadow: var(--shadow-soft);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
 }
-
 .gallery-item:hover {
     transform: scale(1.02);
 }
-
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
-
 .gallery-item:hover img {
     transform: scale(1.1);
 }
 
-/* Lightbox Modal */
+/* Lightbox (tetap sama) */
 .lightbox {
     position: fixed;
     inset: 0;
@@ -640,12 +903,10 @@ body.no-scroll {
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
 .lightbox.active {
     opacity: 1;
     visibility: visible;
 }
-
 .lightbox-content {
     position: relative;
     max-width: 90vw;
@@ -654,7 +915,6 @@ body.no-scroll {
     align-items: center;
     justify-content: center;
 }
-
 .lightbox-content img {
     max-width: 100%;
     max-height: 85vh;
@@ -663,12 +923,10 @@ body.no-scroll {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     animation: zoomIn 0.3s ease;
 }
-
 @keyframes zoomIn {
     from { transform: scale(0.9); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
-
 .lightbox-btn {
     position: absolute;
     background: rgba(255,255,255,0.15);
@@ -684,37 +942,11 @@ body.no-scroll {
     transition: background 0.2s;
     backdrop-filter: blur(4px);
 }
-
 .lightbox-btn:hover { background: rgba(255,255,255,0.3); }
-
 .lightbox-close { top: 20px; right: 20px; }
 .lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
 .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
 
-/* =========================================
-   9. VIDEO SECTION
-   ========================================= */
-.video-section {
-    padding: var(--spacing-lg) var(--spacing-md);
-    background: var(--color-bg-primary);
-    text-align: center;
-}
-
-.video-wrapper {
-    max-width: 800px;
-    margin: var(--spacing-md) auto 0;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-medium);
-    aspect-ratio: 16 / 9;
-    border: 4px solid var(--color-bg-secondary);
-}
-
-.video-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
 
 /* =========================================
    10. FLOATING UI (Music & Bottom Nav)
@@ -811,29 +1043,77 @@ body.no-scroll {
 }
 
 /* =========================================
-   11. RSVP / GUESTBOOK
+   11. RSVP / GUESTBOOK (Oval Krem Transparan)
    ========================================= */
 .rsvp-section {
-    padding: var(--spacing-xl) var(--spacing-md);
-    background: var(--color-bg-secondary);
-}
-
-.rsvp-section .section-subtitle {
-    font-family: var(--font-script);
-    font-size: 1.8rem;
-    color: var(--color-accent);
+    --color-brown: #a8814f00;
+    background: var(--color-brown);
+    padding: var(--spacing-xl) 1.5rem;
     text-align: center;
-    margin-bottom: 0.25rem;
+    margin:0%;
+    padding-top: 20%;
+    padding-bottom: 10%;
 }
+.rsvp-section .container { padding-left: 0; padding-right: 0; }
 
-.rsvp-form {
-    max-width: 500px;
-    margin: var(--spacing-lg) auto 0;
+/* Oval krem transparan */
+.rsvp-oval {
+    --oval-vr: 15%;
+    position: relative;
+    overflow: hidden;
+    color: #4f4a4500;
+    border: 4px solid #A8824F;
+    border-radius: 30% / var(--oval-vr);
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: clamp(3rem, 9vw, 4.5rem) clamp(1.5rem, 6vw, 2.5rem);
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
 }
 
+/* Layer krem transparan */
+.rsvp-oval::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(249, 247, 242, 0.80);
+    border-radius: inherit;
+    z-index: 1;
+}
+.rsvp-oval > * { position: relative; z-index: 2; }
+
+/* Heading */
+.rsvp-heading {
+    margin-bottom: 1.5rem;
+}
+.rsvp-heading .section-subtitle {
+    font-family: var(--font-script);
+    font-size: 1.6rem;
+    color: var(--color-accent);
+    margin-bottom: 0.25rem;
+}
+.rsvp-heading h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 7vw, 2.8rem);
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+/* Form */
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 360px;
+}
+.form-group {
+    text-align: left;
+}
 .form-group label {
     display: block;
     font-size: var(--fs-small);
@@ -853,182 +1133,192 @@ body.no-scroll {
     color: var(--color-text-primary);
     transition: border-color 0.2s, box-shadow 0.2s;
 }
-
 .form-control:focus {
     outline: none;
     border-color: var(--color-accent);
     box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.15);
 }
 
-textarea.form-control {
-    resize: vertical;
-    min-height: 100px;
-}
-
+/* Radio Group (Hadir & Tidak Hadir) */
 .radio-group {
     display: flex;
     gap: 1rem;
 }
-
 .radio-item {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
 }
-
 .radio-item input[type="radio"] {
     accent-color: var(--color-accent);
     width: 18px;
     height: 18px;
 }
-
-.guestbook-list {
-    max-width: 500px;
-    margin: var(--spacing-lg) auto 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-height: 400px;
-    overflow-y: auto;
-    padding-right: 0.5rem;
-}
-
-/* Custom Scrollbar */
-.guestbook-list::-webkit-scrollbar { width: 6px; }
-.guestbook-list::-webkit-scrollbar-track { background: var(--color-bg-primary); }
-.guestbook-list::-webkit-scrollbar-thumb { background: var(--color-accent); border-radius: 10px; }
-
-.wish-card {
-    background: var(--color-bg-primary);
-    padding: 1.25rem;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-soft);
-}
-
-.wish-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-
-.wish-name {
-    font-weight: 600;
-    color: var(--color-text-primary);
-    font-size: 1rem;
-}
-
-.wish-status {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.6rem;
-    border-radius: var(--radius-full);
-    background: rgba(176, 141, 87, 0.1);
-    color: var(--color-accent);
-    font-weight: 500;
-}
-
-.wish-message {
+.radio-item label {
     font-size: var(--fs-small);
-    color: var(--color-text-secondary);
-    line-height: 1.6;
+    color: var(--color-text-primary);
 }
+
+/* Button */
+.btn-primary {
+    background: var(--color-accent);
+    margin: auto;
+    color: #fff;
+    padding: 0.6rem 1.0rem;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    width: 80%;
+    margin-bottom: 7%;
+}
+.btn-primary:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(176, 141, 87, 0.4);
+}
+
+
 
 /* =========================================
-   12. GIFT / AMPLOP DIGITAL
+   12. GIFT / WEDDING GIFT (Reveal on Click)
    ========================================= */
 .gift-section {
-    padding: var(--spacing-xl) var(--spacing-md);
-    background: var(--color-bg-primary);
+    --color-brown: #A8824F;
+    background: var(--color-brown);
+    padding: var(--spacing-xl) 1.5rem;
     text-align: center;
+    margin-top: 0%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
+.gift-section .container { padding-left: 0; padding-right: 0; }
 
-.gift-section .section-subtitle {
+/* Heading */
+.gift-heading {
+    margin-bottom: 2rem;
+}
+.gift-heading .section-subtitle {
     font-family: var(--font-script);
-    font-size: 1.8rem;
-    color: var(--color-accent);
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.7);
     margin-bottom: 0.25rem;
 }
-
-.gift-wrapper {
+.gift-heading h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.gift-intro {
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+    color: rgba(255,255,255,0.9);
+    line-height: 1.6;
     max-width: 400px;
-    margin: var(--spacing-lg) auto 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    margin: 0 auto 2rem;
 }
 
-.bank-card {
-    background: var(--color-bg-secondary);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--color-border);
-    text-align: left;
-}
-
-.bank-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px dashed var(--color-border);
-    padding-bottom: 1rem;
-}
-
-.bank-logo {
-    height: 30px;
-    object-fit: contain;
-}
-
-.bank-name {
+/* Tombol Kirim Gift (awal) */
+.btn-gift-trigger {
+    background: #fff;
+    color: var(--color-brown);
+    border: 2px solid #fff;
+    padding: 0.85rem 2rem;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     font-weight: 600;
-    color: var(--color-text-primary);
+    gap: 0.5rem;
 }
-
-.bank-details {
-    margin-bottom: 1rem;
-}
-
-.bank-number {
-    font-family: monospace;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-text-primary);
-    letter-spacing: 1px;
-    margin-bottom: 0.25rem;
-}
-
-.bank-owner {
-    font-size: var(--fs-small);
-    color: var(--color-text-secondary);
-}
-
-.btn-copy {
-    width: 100%;
-    background: var(--color-bg-primary);
-    color: var(--color-accent);
-    border: 1px solid var(--color-accent);
-}
-
-.btn-copy:hover {
-    background: var(--color-accent);
+.btn-gift-trigger:hover {
+    background: transparent;
     color: #fff;
 }
 
-.qris-wrapper {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border);
+/* Container yang di-reveal (hidden by default) */
+.gift-reveal {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+.gift-reveal.show {
+    max-height: 2000px; /* Cukup besar untuk menampung konten */
+    opacity: 1;
+    margin-top: 2rem;
 }
 
-.qris-image {
+/* Kartu putih (alamat & rekening) */
+.gift-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Alamat */
+.gift-address-name {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d312e;
+    margin-bottom: 0.75rem;
+}
+.gift-address-text {
+    font-size: var(--fs-small);
+    color: #4f4a45;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+/* Rekening */
+.gift-bank-logo {
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 3%;
+    margin: auto;
+}
+.gift-bank-name {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d312e;
+    margin-bottom: 0.5rem;
+    margin-top: 5%;
+}
+.gift-bank-number {
+    font-family: monospace;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2d312e;
+    letter-spacing: 1px;
+    margin-bottom: 1.25rem;
+}
+
+/* Tombol Salin */
+.btn-copy-gift {
+    background: var(--color-brown);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    gap: 0.5rem;
     width: 100%;
-    max-width: 250px;
-    margin: 0 auto 1rem;
-    border-radius: var(--radius-sm);
+    max-width: 280px;
+}
+.btn-copy-gift:hover {
+    background: var(--color-accent-hover);
 }
 
 /* =========================================
@@ -1056,4 +1346,201 @@ textarea.form-control {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
     visibility: visible;
+}
+
+/* =========================================================
+   MOBILE-ONLY LOCK  (Phone Frame untuk Tablet & Desktop)
+   Di bawah 768px (HP asli) → TIDAK berubah sama sekali.
+   Di atas 768px (tablet/laptop) → dikunci jadi tampilan HP.
+   ========================================================= */
+
+
+  /* Alas di luar frame + cegah konten geser saat scrollbar muncul */
+  html {
+    background: var(--color-mat);
+    scrollbar-gutter: stable;
+  }
+
+  /* Konten dikunci selebar HP & ditaruh ke tengah layar */
+  body {
+    max-width: var(--frame-w);
+    margin-inline: auto;
+    position: relative;
+    /* Bayangan hanya di kiri-kanan → efek kartu mengambang */
+    box-shadow: -25px 0 50px rgba(0, 0, 0, 0.30),
+                 25px 0 50px rgba(0, 0, 0, 0.30);
+  }
+
+  /* Cover & Loading ikut selebar frame (bukan full monitor) */
+  #opening-cover,
+  #loading-screen {
+    left: 0;
+    right: 0;
+    width: var(--frame-w);
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+
+  /* PAKSA layout mobile (1 kolom) di semua ukuran layar */
+  .couple-wrapper { grid-template-columns: 1fr !important; }
+  .couple-divider { display: none !important; }
+  .event-cards    { grid-template-columns: 1fr !important; }
+  .gallery-grid   { grid-template-columns: repeat(2, 1fr) !important; }
+  .bottom-nav     { display: flex !important; }
+
+/* =========================================
+   14. THANK YOU / PENUTUP (Oval Transparan + Foto Besar)
+   ========================================= */
+.thank-you-section {
+    --color-brown: #a8814f00;
+    background: var(--color-brown);
+    padding: var(--spacing-xl) 1.5rem;
+    text-align: center;
+    margin : 0%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+.thank-you-section .container { padding-left: 0; padding-right: 0; }
+
+/* Oval transparan untuk thank you */
+.thank-you-oval {
+    --oval-vr: 20%;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #A8824F;
+    border-radius: 50% / var(--oval-vr);
+    width: 100%;
+    max-width: 520px; /* Lebih lebar untuk foto besar */
+    margin: 0 auto;
+    padding: clamp(3rem, 9vw, 5rem) clamp(1.5rem, 6vw, 2.5rem) clamp(4rem, 10vw, 6rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+}
+
+/* Layer krem transparan */
+.thank-you-oval::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(249, 247, 242, 0.80);
+    border-radius: inherit;
+    z-index: 1;
+}
+.thank-you-oval > * { position: relative; z-index: 2; }
+
+/* Text content */
+.thank-you-text {
+    margin-bottom: 0.5rem;
+}
+.thank-you-subtitle {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+.thank-you-names {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.thank-you-message {
+    font-family: var(--font-body);
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    color: var(--color-text-primary);
+    line-height: 1.7;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Foto besar mempelai */
+.thank-you-photo-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 380px; /* Foto lebih besar */
+    aspect-ratio: 3 / 4; /* Portrait */
+    margin: 1rem auto 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 6px solid #fff;
+    margin-bottom: 10%;
+}
+.thank-you-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ornamen dekoratif (opsional - bunga di bawah) */
+.thank-you-ornament {
+    width: 120px;
+    height: auto;
+    opacity: 0.6;
+    margin-top: 1rem;
+}
+
+/* =========================================
+   15. FOOTER / WATERMARK
+   ========================================= */
+.site-footer {
+    background:#4f4a45;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10%;
+    padding-bottom: 100px;
+}
+
+.footer-watermark {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+}
+.footer-watermark strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.footer-social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.footer-social-link:hover {
+    background: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(176, 141, 87, 0.3);
+}
+.footer-social-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Credit tambahan (opsional) */
+.footer-credit {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
 }
