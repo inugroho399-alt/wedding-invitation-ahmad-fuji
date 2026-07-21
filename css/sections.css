@@ -1019,6 +1019,7 @@ body.no-scroll {
     text-decoration: none;
     color: var(--color-text-secondary);
     transition: color 0.2s;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-item svg {
