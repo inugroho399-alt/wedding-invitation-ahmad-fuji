@@ -238,8 +238,8 @@ body.no-scroll {
     background: var(--color-brown);
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 0%;
-    padding-right: 0%;
+    padding-left: 7%;
+    padding-right: 7%;
     text-align: center;
     display: flex;
     /* Tambahkan margin-top untuk jaga space jika Hero tidak ada margin-bottom */
@@ -539,7 +539,7 @@ body.no-scroll {
 .story-box {
     position: relative;
     overflow: hidden;
-    background: url('../assets/images/hero/hero-bg.webp') center/cover no-repeat;
+    background: url('../assets/images/hero/hero-bg.webp') center;
     border-radius: 40px;  /* Rounded corner besar seperti referensi */
     padding: clamp(2.5rem, 8vw, 4rem) 1.5rem clamp(3rem, 10vw, 5rem);
     max-width: 460px;
