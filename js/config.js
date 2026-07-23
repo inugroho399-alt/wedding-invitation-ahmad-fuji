@@ -52,7 +52,7 @@ export const WEDDING_CONFIG = {
         {
             year: "7 Juli 2023",
             title: "Pertama Bertemu",
-            description: "Pertama kenal karena iseng. Kebetulan teman saya adalah teman dia juga secara sengaja memperkenalkan kami dengan memberikan nomor whatsapp saya kepada dia. Dan dia memulai chat. Hanya percakapan biasa dan belum ada perasaan apa apa karena memang belum pernah bertemu."
+            description: "Pertama kenal karena iseng . Kebetulan temen saya adalah temen dia juga secara sengaja memperkenalkan kami dengan memberikan nomer WhatsApp dia kepada saya dan saya memulai chat hanya percakapan biasa dan belum ada perasaan apa apa karena memang belum pernah bertemu."
         },
         {
             year: "8 Agustus 2023",
@@ -62,7 +62,7 @@ export const WEDDING_CONFIG = {
         {
             year: "20 Desember 2025",
             title: "Lamaran",
-            description: "Setelah sekian lama menjalin hubungan akhirnya kami memutuskan untuk melangkah ke jenjang yang lebih serius. Sedikit cerita, memang saat kami sedang ngobrol dan bercanda saya sering bilang ingin dilamar saat hari ulang tahun saya. Dan benar saja, tepat di hari ulang tahun saya dia datang bersama keluarga besarnya melamar saya. Hari itu benar2 hari yang berkesan untuk saya, karena di hari istimewa itu saya menerima kado terindah seumur hidup saya. Meskipun berlangsung sederhana tetapi terasa hangat dan tentu saja senyum bahagia terpancar dari keluarga kami."
+            description: "Setelah sekian lama menjalin hubungan akhirnya kami memutuskan untuk melangkah ke jenjang yang lebih serius. Sedikit cerita, memang saat kami sedang ngobrol dan bercanda dia sering bilang ingin dilamar saat hari ulang tahunnya . Dan benar saja, tepat di hari ulang tahun dia saya datang bersama keluarga besar untuk melamar dia. Hari itu benar2 hari yang berkesan untuk saya, karena di hari istimewa itu saya memberikan kado terindah . Meskipun berlangsung sederhana tetapi terasa hangat dan tentu saja senyum bahagia terpancar dari keluarga kami."
         },
         {
             year: "8 Agustus 2026",

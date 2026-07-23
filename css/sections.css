@@ -868,6 +868,7 @@ body.no-scroll {
     margin: 0 auto;
 }
 
+/* Default: Foto Portrait (Tegak) */
 .gallery-item {
     position: relative;
     aspect-ratio: 3 / 4;
@@ -877,18 +878,29 @@ body.no-scroll {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
 }
-.gallery-item:hover {
-    transform: scale(1.02);
-}
+.gallery-item:hover { transform: scale(1.02); }
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
-.gallery-item:hover img {
-    transform: scale(1.1);
+.gallery-item:hover img { transform: scale(1.1); }
+
+/* Variasi 1: Foto Landscape (Memanjang Penuh 2 Kolom) */
+.gallery-item-wide {
+    grid-column: span 2; /* Memakan 2 kolom */
+    aspect-ratio: 16 / 9; /* Rasio layar lebar */
 }
+
+/* Variasi 2: Foto Square (Kotak Sempurna) */
+.gallery-item-square {
+    aspect-ratio: 1 / 1; /* Rasio 1:1 */
+}
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
 
 /* Lightbox (tetap sama) */
 .lightbox {
@@ -1546,4 +1558,26 @@ body.no-scroll {
     margin-top: 1rem;
     font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.5);
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+a.btn {
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus,
+button:focus-visible,
+button:active,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+a.btn:focus,
+a.btn:focus-visible {
+  outline: none;
+  box-shadow: none;
 }
